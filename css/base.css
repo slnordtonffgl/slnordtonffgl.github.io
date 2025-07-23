@@ -1,0 +1,29 @@
+:root{
+    --p-color:  rgba(255, 186, 0, 0.83);
+    --s-color:  rgb(255, 243, 97);
+    --text-color:#7e4b06;
+    --padding-gallery: 18px;
+    --accent-1: #fc9100;
+    --shadow-1: rgba(255, 0, 0, 0.35);
+    --button-bg-1:  #ffeb00;
+    --button-bg-2: #ff9300;
+    --button-text-1: #53350c;
+    --button-text-2: #553304;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color: var(--text-color)
+}
+
+body {
+     margin: 0;
+    background-color: var(--s-color);
+    text-align: center;
+}
+
+h1 {
+    padding: 10px;
+    background-color: var(--p-color);
+}
