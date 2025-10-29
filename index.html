@@ -21,10 +21,10 @@
         }
         .main-header-icon{
             background-color: rgb(247, 190, 0);
-            width: 100px;
-            height: 100px;
+            width: clamp(4rem,5vw,3rem);
+            height:clamp(5rem,5vw,3rem);
             overflow: hidden;
-             display: flex;
+            display: flex;
             justify-content: center;
             align-items:center;
             border-radius: 100%;
@@ -43,6 +43,7 @@
             margin-bottom: 1%;
             border-radius: 10%;
         }
+        
         .main-nav a{
             text-decoration: none;
             background-color: rgb(255, 184, 51);
@@ -60,13 +61,43 @@
         .main-header-h1{
             text-align: center;
             color: rgb(219, 160, 0);
-            font-size: 2.0rem;
+            font-size: clamp(1.8rem,4vw,2.5rem);
             display: flex;
             justify-content: center;
             align-items:center;
             border-radius: 20px;
             margin: 1%;
         }
+        .main-nav-dropdown{
+            display: none;
+        }
+         .main-nav-dropdown:hover + .main-nav{
+             display: block;
+             position: absolute;
+            }
+        @media (max-width: 480px){
+            .main-nav-box{
+                position: relative;
+            }
+            
+            .main-nav{
+               display: none;
+                
+            }
+           .main-nav-dropdown{
+            display: block;
+            font-size: 3rem;
+            color: var(--color-text);
+            flex: 1;
+             / background: yellow;
+            text-align: left;
+          } 
+            .main-nav-dropdown:active + .main-nav{
+                display: block;
+                position: absolute;
+            }
+    }
+        
     </style>
 </head>
 <body>
@@ -74,11 +105,13 @@
        <div class="main-header-icon">
          <img src="assets/imgs/images.jpg" alt="">
        </div>
-
+       <nav class="main-nav-box">
+        <a href="#" class="main-nav-dropdown">=</a>
        <nav class="main-nav">
            <a href="#">Главная</a>
            <a href="#">Дизайн</a>
            <a href="#">Код</a>
+       </nav>
        </nav>
        <h1 class="main-header-h1">WEABSITE</h1> 
     </header>   
